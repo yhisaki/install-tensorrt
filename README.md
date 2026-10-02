@@ -9,18 +9,19 @@ A script that installs TensorRT 10.8.0 under `$HOME` without root privileges.
 - System python3 (3.10)
 - Shell: bash / zsh / fish
 
-## Usage
+## Install
 
 ```sh
-./install_tensorrt.sh
+curl -fsSL https://yhisaki.github.io/install-tensorrt/install_tensorrt.sh | bash
 ```
 
-To change the install location, set `PREFIX` (default: `~/.local/opt/tensorrt`):
+This works from bash, zsh, and fish. To change the install location, set `PREFIX` (default: `~/.local/opt/tensorrt`):
 
 ```sh
-PREFIX=/path/to/dir ./install_tensorrt.sh          # bash / zsh
-env PREFIX=/path/to/dir ./install_tensorrt.sh      # fish
+curl -fsSL https://yhisaki.github.io/install-tensorrt/install_tensorrt.sh | PREFIX=/path/to/dir bash
 ```
+
+You can also clone this repository and run `./install_tensorrt.sh` directly.
 
 The script does the following:
 
